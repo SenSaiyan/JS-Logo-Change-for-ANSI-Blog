@@ -1,4 +1,16 @@
 function replaceLogo(){
+	// var a = document.getElementsByClassName("site-logo")[0].childNodes[1];
+	// var link = document.createElement("a");
+	// link["href"] = "https://blog.ansi.org/anab-accreditation/";
+	// link["rel"] = "home";
+	// document.getElementsByClassName("site-logo")[0].replaceChild(link, a);
+
+	// var picture = document.createElement("picture");	
+	// link.append(picture);
+	// // picture["class"] = "sp-no-webp";
+	// ANABwebp[0].setAtrribute("class", "sp-no-webp");
+	// console.log(picture);
+
 	var ANABwebp = document.createElement("source");
 	// ANABwebp[0].setAtrribute("srcset", "https://blog.cachefly.net/wp-content/uploads/2019/10/ANAB-Logo.webp");
 	// ANABwebp[0].setAtrribute("type", "image/webp");
@@ -38,6 +50,8 @@ function replaceLogo(){
 	document.getElementsByClassName("sp-no-webp")[0].replaceChild(ANABwebp, child1);
 	document.getElementsByClassName("sp-no-webp")[0].replaceChild(ANABjpg, child2);
 	document.getElementsByClassName("sp-no-webp")[0].replaceChild(image, child3);
+
+	document.getElementsByClassName("sp-no-webp")[0].parentNode.href = "https://blog.ansi.org/anab-accreditation/";
 }
 
 replaceLogo();
